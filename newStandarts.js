@@ -12,10 +12,10 @@ let sponsors = {
     rus: ['RusAuto', 'SBO']
 };
 
-function calcCash({
+calcCash = ({
     own = 0,
     sponsorsCash = 0
-} = {}) {
+} = {}) => {
     let total = own;
     for (let i = 0; i < sponsorsCash.length; i++) {
         total += +sponsorsCash[i];
@@ -25,12 +25,12 @@ function calcCash({
 
 let money = calcCash({ sponsorsCash: sponsors.cash });
 
-function makeBusiness({
+makeBusiness({
     director = 'Victor',
     owner,
     cash,
     emp,
-} = {}) {
+} = {}) => {
     let sumSponsors = [...sponsors.eu, ...sponsors.rus, 'unexpected sponsor'];
     console.log('We have a business. Owner: ' + owner + ', director: ' + director + '. Our budget: ' + cash + '. And our employers: ' +
         emp);
