@@ -40,10 +40,3 @@ function makeBusiness({
 }
 
 makeBusiness({ owner: 'Sam', cash: money, emp: employersNames });
-
-
-function connect({ path = 'path', user = 'admin' } = {}) {
-    console.log(user)
-}
-
-connect({ user: 'lll' })
